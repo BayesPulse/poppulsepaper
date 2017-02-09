@@ -1,0 +1,85 @@
+
+\documentclass[12pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format      
+\usepackage{amsmath}
+\usepackage{epsfig}
+\usepackage{lscape}
+%\usepackage{rotating}
+\bibliographystyle{abbrv}
+%\bibliography{ref.bib}
+\usepackage{array}
+\usepackage{tablefootnote}
+\topmargin 0in \headheight 0.0in \textheight 9in \textwidth 6.5in
+\oddsidemargin 0.1in \evensidemargin 0.1in
+\renewcommand{\baselinestretch}{1.6}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\ie}{\emph{i.e.}}
+\newcommand{\eg}{\emph{e.g.}}
+\newcommand{\etal}{\emph{et.al.}}
+\newcommand{\etc}{\emph{etc.}}
+
+\begin{document}
+
+\title{Documentation for Single Subject Bayesian Deconvolution}
+\author{Kenneth Horton and Nichole E Carlson}
+\date{}
+\maketitle
+
+\section{General information}
+The code in this folder is for the single subject Bayesian deconvolution model as investigated in this paper (i.e., the exact same priors).  We also have an R package (https://github.com/XXX); however the priors for the pulse masses and widths differ from the log normal.  The package uses a truncated t-distributions. To run this code, the user needs to compile the 8 *.c files in this folder. Then to run the executable, the user needs to create an input file setting parameters in the priors, starting values for the MCMC algorithm and file names for output and data input. An example with numbers is provided in the simdata\_example folder. We also provide an example with words used to describe the numbers needed. Below we also provide a dictionary for the values that need to be in the input file.
+
+The data files need to be a space delimited *.dat file with 3 columns and a header row.  The column names are OBS (integer), TIME (in min), hormone concentration (conc. units).
+
+
+In addition, in the directory a seed file ("seed.dat") is provided and needs to be in the directory with the complied executable file.  An example seed file is in this directory for ease of copying.  This file is the input for the random number generators.
+
+\section{Creating the input file}
+In the input.dat file the following are the values needed by row (space delimited). We first set the file names, then needs for the MCMC run length, then the parameters for the priors are specified, followed by starting values and initial proposal variances.
+\begin{enumerate}
+\item The name of the data file for the subject being analyzed.
+\item The name of the output file for the common parameters (baseline, half-life, variance parameters, etc.) and the name of the output file for the pulse specific parameters (pulse locations, mass and width).
+\item Number of MCMC iterations to run (thinning is hard coded at NN=50 in the mcmc.c file and the screen output is hard coded at NNN=5000 in mcmc.c).
+\item Mean ($m_\alpha$) and variance ($v_\alpha^2$ )of the prior on the log pulse mass mean ($\mu_\alpha$).
+\item Mean ($m_\omega$) and variance ($v_\omega^2$) of the prior on the log pulse width mean ($\mu_\omega$).
+\item Mean ($m_b$) and variance ($v_b$) of the prior on the baseline ($\theta_b$).
+\item Mean ($m_h$) and variance ($v_h$) of the prior on the half-life ($\theta_h$).
+\item The two parameters in the Inverse-Gamma prior on the model error variance parameter ($\sigma_e^2$).
+\item The maximum value for the Uniform prior on the pulse-to-pulse standard deviation of log pulse mass ($\nu_\alpha$) and log pulse width ($\nu_\omega$).
+\item The mean of the Poisson distribution for the prior on the number of pulses ($r$).
+\item The starting values of the mean log pulse mass ($\mu_\alpha$) and the mean log pulse width ($\mu_\omega$).
+\item The starting values of the baseline ($\theta_b$) and half-life ($\theta_h$).
+\item The starting value for the model error variance (it is inverted in the algorithm).
+\item The starting value for the pulse-to-pulse SD of the log pulse masses ($\nu_\alpha$) and log pulse widths ($\nu_\omega$).
+\item The initial proposal variances for baseline ($\theta_b$) and half-life ($\theta_h$).  The correlation is assumed -0.9, which sets the covariance for the matrix. The hard coding is in mcmc.c.
+\item The initial proposal variances for the pulse to pulse SD of log pulse mass ($\nu_\alpha$) and log pulse width ($\nu_\omega$).
+\item The initial proposal variances for the individual log pulse masses ($\log\alpha_{k}$), log pulse widths ($\log\omega_k$), and pulse locations (in minutes, $\tau_k$).
+\end{enumerate}
+
+\section{Interpreting the output files}
+\begin{enumerate}
+\item For each subject there is common hormone parameters (*.out) and pulse parameters file (*.out), both named by the user in the input file. 
+\item Common parameters output file: These are the parameters that are common across pulses.  The columns are: number of pulses ($N_s$), baseline ($\theta_b$), mean log pulse mass $\mu_{\alpha}$, mean log pulse width $\mu_{\omega}$, half-life ($\theta_h$), model error ($\sigma^2_{e}$), pulse-to-pulse SD for log pulse mass ($\nu_\alpha$), pulse-to-pulse SD for log pulse width ($\nu_\omega$).
+\item Pulse parameters output file: These are the pulse specific parameters. The columns are:  iteration number after thinning, number of pulses ($N_s$), pulse number in this iteration (a counter), pulse location ($\tau_k$), pulse mass ($\alpha_k$), pulse width ($\omega_k$).
+\end{enumerate}
+
+\section{Interpreting the screen output}
+Every 5000 iterations the following output information is written to the screen. The purpose of the output is generally to monitor acceptance rates prior to a full run being complete.  Each write to the screen has the following form:
+\begin{enumerate}
+\item The iteration number, the current value of the log likelihood.
+\item The current parameter value for A (mean log pulse mass hormone concentration scale), s (mean log pulse width min$^2$ scale),  d (half-life in min), v (model error variance).
+\item The pulse location (in hours), mass (conc. units), width (hours$^2$) for each pulse.
+\item Current acceptance rates in the birth-death algorithms: rem = acceptance \% of individual pulse masses, rew = acceptance \% of individual pulse widths, time = acceptance \% of individual pulse locations, md = acceptance \%, revm = acceptance \% of SD for pulse masses, revw = acceptance \% of SD for pulse widths).
+\end{enumerate}
+
+\section{Compiling the code}
+A makefile exists in the file for compiling the c code in this directory.
+
+\begin{enumerate}
+\item deconvolution\_main.c: This file reads in the data. Sets the initial values, the priors and the proposals for the MH algorithms. It initializes the pulse parameter lists and the cluster lists.  It calls the MCMC algorithm.
+\item format\_data.c: This file is called in deconvolution\_main.c and is the algorithm for reading in the data.
+\item mcmc.c: This file is the birth-death MCMC algorithm (function mcmc) and controls screen and file output. It is called from deconvolution\_main.c.
+\item birthdeath.c: This file is the birth-death algorithm for the pulse locations.  The function birthdeath is called from the mcmc.c file.
+\item The other files in the directory are supporting subroutines for the random number generators, etc.
+\end{enumerate}
+
+\end{document}

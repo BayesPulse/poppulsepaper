@@ -1,0 +1,87 @@
+
+\documentclass[12pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format      
+\usepackage{amsmath}
+\usepackage{epsfig}
+\usepackage{lscape}
+%\usepackage{rotating}
+\bibliographystyle{abbrv}
+%\bibliography{ref.bib}
+\usepackage{array}
+\usepackage{tablefootnote}
+\topmargin 0in \headheight 0.0in \textheight 9in \textwidth 6.5in
+\oddsidemargin 0.1in \evensidemargin 0.1in
+\renewcommand{\baselinestretch}{1.6}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\ie}{\emph{i.e.}}
+\newcommand{\eg}{\emph{e.g.}}
+\newcommand{\etal}{\emph{et.al.}}
+\newcommand{\etc}{\emph{etc.}}
+
+\begin{document}
+
+\title{Documentation for Population Bayesian Deconvolution}
+\author{Kenneth Horton and Nichole E Carlson}
+\date{}
+\maketitle
+
+\section{General information}
+The code in this folder is for the population Bayesian deconvolution model as investigated in this paper (i.e., the exact same priors).  To run this code, the user needs to compile the 8 *.c files in the src folder. Then to run the executable, the user needs to create an input file setting parameters in the priors, starting values for the MCMC algorithm and file names for output and data input. An example with numbers is provided in the simdata\_example folder. We also provide an example with words used to describe the numbers needed. Below we also provide a dictionary for the values that need to be in the input file.
+
+The data files need to be a space delimited *.dat file with 1 column for time of observations in minutes (first column) plus a column of observations for each subject. There is no header row.  
+
+In addition, in the directory a seed file ("seed.dat") is provided and needs to be in the directory with the complied executable file.  An example seed file is in this directory for ease of copying.  This file is the input for the random number generators.
+
+\section{Creating the input file}
+In the input.dat file the following are the values needed by row (space delimited). We first set the file names, then needs for the MCMC run length, then the parameters for the priors are specified, followed by starting values and initial proposal variances.
+\begin{enumerate}
+\item The name of the data file for the subject being analyzed.
+\item The name of the root of the output file for the common parameters (baseline, half-life, variance parameters, etc.) and the name of the output file for the pulse specific parameters (pulse locations, mass and width). A subject number is added at the end of each file with the *.out extension.
+\item Number of subjects in the analysis and the number of MCMC iterations to run (thinning is hard coded at NN=50 in the pop\_mcmc.c file and the screen output is hard coded at NNN=5000 in mcmc.c).
+\item Mean ($m_\alpha$) and variance ($v_\alpha^2$ )of the prior on the population log pulse mass mean ($\mu_\alpha$) and the maximum of the uniform prior of the SD on the pulse-to-pulse variation in the log masses ($\sigma_\alpha$ in $\Sigma_s$) and the maximum of the uniform prior of the SD on subject-to-subject variation in mean log pulse masses ($\upsilon_\alpha$ in $\Upsilon_s$).
+\item Mean ($m_\omega$) and variance ($v_\omega^2$) of the prior on the log pulse width mean ($\mu_\omega$) and the maximum of the uniform prior of the SD on the pulse-to-pulse variation in the log widths ($\sigma_\omega$ in $\Sigma_s$) and the maximum of the uniform prior of the SD on subject-to-subject variation in mean log pulse widths ($\upsilon_\omega$ in $\Upsilon_s$).
+\item Mean ($m_b$) and variance ($v_b$) of the prior on the baseline ($\theta_b$) and upper bound on the uniform prior on the SD of the subject-to-subject variation ($\sigma_b$).
+\item Mean ($m_h$) and variance ($v_h$) of the prior on the half-life ($\theta_h$) and upper bound on the uniform prior on the SD of the subject-to-subject variation ($\sigma_h$).
+\item The two parameters in the Inverse-Gamma prior on the model error variance parameter ($\sigma_e^2$).
+\item The mean of the Poisson distribution for the prior on the number of pulses ($r$).
+\item The starting values of the mean log pulse mass ($\mu_\alpha$), SD's of the pulse-to-pulse variation of log pulse mass ($\sigma_\alpha$) and the subject-to-subject variation of the mean log pulse mass ($\upsilon_\alpha$).
+\item The starting values of the baseline ($\theta_b$) and SD of the subject-to-subject variation of the baselines ($\sigma_b$).
+\item The starting values of the half-life ($\theta_h$) and the SD of the subject-to-subject variation of the half-lives ($\sigma_h$).
+\item The starting value for the model error variance (it is inverted in the algorithm).
+\item The initial proposal variances for subject level mean log pulse mass, population mean log pulse mass, and individual log pulse masses.
+\item The initial proposal variances for subject level mean log pulse width, population mean log pulse width, and individual log pulse widths.
+\item The initial proposal variances for the population mean baseline and the subject level baselines.
+\item The initial proposal variances for the population mean half-life and the subject level half-lives.
+\item The initial proposal variances for the pulse locations.
+\end{enumerate}
+
+\section{Interpreting the output files}
+\begin{enumerate}
+\item For each subject there is common hormone parameters (*.out) and pulse parameters file (*.out), both named by the user in the input file. There is also a population parameters file (fileroot from above.out. Same name as the subject common parameter file without subject number). 
+\item Population parameters output file: These are the parameters that are common across subjects.  The columns are: mean log pulse mass ($\mu_\alpha$), mean log pulse width ($\mu_\omega$). Subject-to-subject SD of mea log pulse mass and mean log pulse width. Pulse-to-pulse SD of pulse mass and Width. Mean baseline and SD of baselines between subjects. Mean half-life and SD of half-lives between subjects. Model error variance.
+\item Subject level common parameters file: These are the parameters that are common across pulses in a subject. The columns are: number of pulses ($N_s$), mean log pulse mass $\mu_{\alpha}$, mean log pulse width $\mu_{\omega}$, baseline ($\theta_b$), half-life ($\theta_h$).
+\item Pulse parameters output file: These are the pulse specific parameters. The columns are:  iteration number, number of pulses ($N_s$), pulse number in this iteration (a counter), pulse mass ($\alpha_k$), pulse width ($\omega_k$), pulse location ($\tau_k$).
+\end{enumerate}
+
+\section{Interpreting the screen output}
+Every 5000 iterations the following output information is written to the screen. The purpose of the output is generally to monitor acceptance rates prior to a full run being complete.  Each write to the screen has the following form:
+\begin{enumerate}
+\item The iteration number.
+\item The current parameter value for mean baseline, mean half-life, mean of mean log pulse masses, mean of mean log pulse width (min$^2$ scale),  model error variance.
+\item Current acceptance rates in the birth-death algorithms: SD of mean log pulse masses (s\_ma) and SD of log pulse masses (s\_a), individual log pulse masses ($A_ki$).
+\item Acceptance rates for SD of mean log pulse widths, SD of log pulse widths, individual log pulse widths.
+\item Acceptance rates for SD of baseline, SD of half-life, mean baseline/half-life and individual pulse locations.
+\end{enumerate}
+
+\section{Compiling the code}
+A makefile exists in the file for compiling the c code in this directory.
+
+\begin{enumerate}
+\item pop\_deconvolution\_main.c: This file reads in the data. Sets the initial values, the priors and the proposals for the MH algorithms. It initializes the pulse parameter lists and the cluster lists.  It calls the MCMC algorithm.
+\item pop\_format\_data.c: This file is called in deconvolution\_main.c and is the algorithm for reading in the data.
+\item pop\_mcmc.c: This file is the birth-death MCMC algorithm (function mcmc) and controls screen and file output. It is called from deconvolution\_main.c.
+\item pop\_birthdeath.c: This file is the birth-death algorithm for the pulse locations.  The function birthdeath is called from the mcmc.c file.
+\item The other files in the directory are supporting subroutines for the random number generators, etc.
+\end{enumerate}
+
+\end{document}

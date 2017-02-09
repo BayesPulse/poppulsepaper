@@ -1,0 +1,704 @@
+k=396
+N=36
+s=10
+test=2.862201
+
+
+iter = 0 
+mu_b 2.91 mu_h 44.7499 mu_a 2.78 mu_w 2.85  v 5.5158e-01
+pct s_ma = 0.00 pct s_a = 1.00 pct A_ki = 0.33 
+pct s_mw = 0.00 pct s_w = 0.00 pct s2p_ki = 0.42 
+pct s_b = 0.00 pct s_h = 1.00 pct B-HL = 0.60 pct time = 0.33 
+
+
+iter = 5000 
+mu_b 2.89 mu_h 45.5592 mu_a 0.88 mu_w 2.24  v 1.1585e-02
+pct s_ma = 0.63 pct s_a = 0.40 pct A_ki = 0.39 
+pct s_mw = 0.17 pct s_w = 0.24 pct s2p_ki = 0.62 
+pct s_b = 0.38 pct s_h = 0.45 pct B-HL = 0.20 pct time = 0.67 
+
+
+iter = 10000 
+mu_b 3.04 mu_h 44.9991 mu_a 1.36 mu_w 2.64  v 1.2528e-02
+pct s_ma = 0.34 pct s_a = 0.37 pct A_ki = 0.34 
+pct s_mw = 0.50 pct s_w = 0.28 pct s2p_ki = 0.42 
+pct s_b = 0.32 pct s_h = 0.42 pct B-HL = 0.25 pct time = 0.49 
+
+
+iter = 15000 
+mu_b 3.16 mu_h 36.5396 mu_a 1.03 mu_w 3.28  v 1.2265e-02
+pct s_ma = 0.30 pct s_a = 0.34 pct A_ki = 0.35 
+pct s_mw = 0.51 pct s_w = 0.40 pct s2p_ki = 0.39 
+pct s_b = 0.42 pct s_h = 0.36 pct B-HL = 0.23 pct time = 0.38 
+
+
+iter = 20000 
+mu_b 3.47 mu_h 39.0525 mu_a 1.23 mu_w 2.56  v 1.0393e-02
+pct s_ma = 0.39 pct s_a = 0.34 pct A_ki = 0.34 
+pct s_mw = 0.30 pct s_w = 0.54 pct s2p_ki = 0.50 
+pct s_b = 0.33 pct s_h = 0.22 pct B-HL = 0.23 pct time = 0.36 
+
+
+iter = 25000 
+mu_b 3.21 mu_h 40.8407 mu_a 0.93 mu_w 3.18  v 1.0405e-02
+pct s_ma = 0.36 pct s_a = 0.43 pct A_ki = 0.36 
+pct s_mw = 0.44 pct s_w = 0.15 pct s2p_ki = 0.17 
+pct s_b = 0.34 pct s_h = 0.57 pct B-HL = 0.28 pct time = 0.36 
+
+
+iter = 30000 
+mu_b 3.44 mu_h 36.3823 mu_a 0.95 mu_w 2.61  v 1.0875e-02
+pct s_ma = 0.36 pct s_a = 0.41 pct A_ki = 0.33 
+pct s_mw = 0.35 pct s_w = 0.30 pct s2p_ki = 0.30 
+pct s_b = 0.32 pct s_h = 0.45 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 35000 
+mu_b 2.41 mu_h 34.6835 mu_a 0.60 mu_w 2.51  v 9.1584e-03
+pct s_ma = 0.36 pct s_a = 0.44 pct A_ki = 0.35 
+pct s_mw = 0.25 pct s_w = 0.30 pct s2p_ki = 0.30 
+pct s_b = 0.33 pct s_h = 0.42 pct B-HL = 0.25 pct time = 0.35 
+
+
+iter = 40000 
+mu_b 4.01 mu_h 40.4227 mu_a 0.87 mu_w 2.66  v 1.0690e-02
+pct s_ma = 0.35 pct s_a = 0.45 pct A_ki = 0.35 
+pct s_mw = 0.29 pct s_w = 0.31 pct s2p_ki = 0.31 
+pct s_b = 0.33 pct s_h = 0.38 pct B-HL = 0.25 pct time = 0.35 
+
+
+iter = 45000 
+mu_b 3.04 mu_h 34.3135 mu_a 1.07 mu_w 3.15  v 9.6370e-03
+pct s_ma = 0.35 pct s_a = 0.45 pct A_ki = 0.35 
+pct s_mw = 0.32 pct s_w = 0.31 pct s2p_ki = 0.31 
+pct s_b = 0.33 pct s_h = 0.41 pct B-HL = 0.25 pct time = 0.35 
+
+
+iter = 50000 
+mu_b 3.37 mu_h 37.6506 mu_a 1.08 mu_w 2.85  v 1.0286e-02
+pct s_ma = 0.35 pct s_a = 0.45 pct A_ki = 0.35 
+pct s_mw = 0.34 pct s_w = 0.31 pct s2p_ki = 0.31 
+pct s_b = 0.33 pct s_h = 0.43 pct B-HL = 0.25 pct time = 0.35 
+
+
+iter = 55000 
+mu_b 2.41 mu_h 38.6636 mu_a 0.95 mu_w 2.34  v 1.0255e-02
+pct s_ma = 0.35 pct s_a = 0.44 pct A_ki = 0.35 
+pct s_mw = 0.33 pct s_w = 0.30 pct s2p_ki = 0.30 
+pct s_b = 0.33 pct s_h = 0.43 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 60000 
+mu_b 2.71 mu_h 35.9875 mu_a 0.91 mu_w 2.79  v 1.1805e-02
+pct s_ma = 0.35 pct s_a = 0.44 pct A_ki = 0.35 
+pct s_mw = 0.34 pct s_w = 0.30 pct s2p_ki = 0.30 
+pct s_b = 0.33 pct s_h = 0.45 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 65000 
+mu_b 2.31 mu_h 40.4702 mu_a 0.99 mu_w 2.30  v 1.1423e-02
+pct s_ma = 0.35 pct s_a = 0.44 pct A_ki = 0.35 
+pct s_mw = 0.34 pct s_w = 0.30 pct s2p_ki = 0.30 
+pct s_b = 0.33 pct s_h = 0.42 pct B-HL = 0.25 pct time = 0.35 
+
+
+iter = 70000 
+mu_b 2.61 mu_h 47.6609 mu_a 0.87 mu_w 2.64  v 1.1973e-02
+pct s_ma = 0.36 pct s_a = 0.43 pct A_ki = 0.35 
+pct s_mw = 0.34 pct s_w = 0.30 pct s2p_ki = 0.30 
+pct s_b = 0.33 pct s_h = 0.42 pct B-HL = 0.25 pct time = 0.35 
+
+
+iter = 75000 
+mu_b 2.96 mu_h 40.4844 mu_a 1.15 mu_w 2.66  v 1.0871e-02
+pct s_ma = 0.36 pct s_a = 0.42 pct A_ki = 0.35 
+pct s_mw = 0.33 pct s_w = 0.29 pct s2p_ki = 0.29 
+pct s_b = 0.33 pct s_h = 0.44 pct B-HL = 0.25 pct time = 0.35 
+
+
+iter = 80000 
+mu_b 2.96 mu_h 36.5391 mu_a 0.61 mu_w 2.74  v 1.0999e-02
+pct s_ma = 0.36 pct s_a = 0.43 pct A_ki = 0.35 
+pct s_mw = 0.33 pct s_w = 0.29 pct s2p_ki = 0.29 
+pct s_b = 0.33 pct s_h = 0.45 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 85000 
+mu_b 5.24 mu_h 43.5499 mu_a 1.25 mu_w 1.93  v 1.0084e-02
+pct s_ma = 0.36 pct s_a = 0.43 pct A_ki = 0.35 
+pct s_mw = 0.33 pct s_w = 0.29 pct s2p_ki = 0.29 
+pct s_b = 0.33 pct s_h = 0.44 pct B-HL = 0.25 pct time = 0.35 
+
+
+iter = 90000 
+mu_b 3.40 mu_h 46.0917 mu_a 1.23 mu_w 2.69  v 1.1747e-02
+pct s_ma = 0.36 pct s_a = 0.43 pct A_ki = 0.35 
+pct s_mw = 0.33 pct s_w = 0.29 pct s2p_ki = 0.29 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.25 pct time = 0.35 
+
+
+iter = 95000 
+mu_b 3.35 mu_h 42.4757 mu_a 1.00 mu_w 3.00  v 1.0420e-02
+pct s_ma = 0.36 pct s_a = 0.43 pct A_ki = 0.35 
+pct s_mw = 0.34 pct s_w = 0.29 pct s2p_ki = 0.29 
+pct s_b = 0.33 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 100000 
+mu_b 3.32 mu_h 33.6269 mu_a 0.62 mu_w 3.14  v 1.0796e-02
+pct s_ma = 0.36 pct s_a = 0.42 pct A_ki = 0.35 
+pct s_mw = 0.34 pct s_w = 0.30 pct s2p_ki = 0.30 
+pct s_b = 0.33 pct s_h = 0.45 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 105000 
+mu_b 2.25 mu_h 38.3609 mu_a 1.49 mu_w 3.03  v 1.0217e-02
+pct s_ma = 0.36 pct s_a = 0.42 pct A_ki = 0.35 
+pct s_mw = 0.34 pct s_w = 0.30 pct s2p_ki = 0.30 
+pct s_b = 0.33 pct s_h = 0.45 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 110000 
+mu_b 3.41 mu_h 43.3321 mu_a 0.95 mu_w 3.14  v 1.1360e-02
+pct s_ma = 0.36 pct s_a = 0.42 pct A_ki = 0.35 
+pct s_mw = 0.34 pct s_w = 0.30 pct s2p_ki = 0.30 
+pct s_b = 0.33 pct s_h = 0.45 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 115000 
+mu_b 2.74 mu_h 39.0378 mu_a 1.29 mu_w 2.42  v 9.8395e-03
+pct s_ma = 0.36 pct s_a = 0.42 pct A_ki = 0.35 
+pct s_mw = 0.35 pct s_w = 0.30 pct s2p_ki = 0.30 
+pct s_b = 0.33 pct s_h = 0.45 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 120000 
+mu_b 3.47 mu_h 33.3622 mu_a 0.95 mu_w 2.15  v 1.1540e-02
+pct s_ma = 0.36 pct s_a = 0.42 pct A_ki = 0.35 
+pct s_mw = 0.35 pct s_w = 0.30 pct s2p_ki = 0.30 
+pct s_b = 0.33 pct s_h = 0.45 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 125000 
+mu_b 3.63 mu_h 36.2321 mu_a 1.09 mu_w 3.09  v 1.1766e-02
+pct s_ma = 0.36 pct s_a = 0.42 pct A_ki = 0.35 
+pct s_mw = 0.35 pct s_w = 0.31 pct s2p_ki = 0.30 
+pct s_b = 0.33 pct s_h = 0.45 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 130000 
+mu_b 3.49 mu_h 40.6337 mu_a 1.50 mu_w 2.42  v 1.0595e-02
+pct s_ma = 0.36 pct s_a = 0.42 pct A_ki = 0.35 
+pct s_mw = 0.34 pct s_w = 0.31 pct s2p_ki = 0.30 
+pct s_b = 0.33 pct s_h = 0.45 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 135000 
+mu_b 2.44 mu_h 38.0264 mu_a 0.80 mu_w 2.76  v 1.1272e-02
+pct s_ma = 0.36 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.34 pct s_w = 0.31 pct s2p_ki = 0.31 
+pct s_b = 0.33 pct s_h = 0.45 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 140000 
+mu_b 1.21 mu_h 38.4741 mu_a 1.03 mu_w 2.20  v 1.1005e-02
+pct s_ma = 0.36 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.34 pct s_w = 0.31 pct s2p_ki = 0.31 
+pct s_b = 0.33 pct s_h = 0.46 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 145000 
+mu_b 2.75 mu_h 46.6778 mu_a 1.06 mu_w 2.46  v 1.1025e-02
+pct s_ma = 0.36 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.34 pct s_w = 0.31 pct s2p_ki = 0.31 
+pct s_b = 0.33 pct s_h = 0.45 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 150000 
+mu_b 2.00 mu_h 34.5749 mu_a 0.86 mu_w 2.16  v 1.0131e-02
+pct s_ma = 0.36 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.34 pct s_w = 0.31 pct s2p_ki = 0.31 
+pct s_b = 0.33 pct s_h = 0.45 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 155000 
+mu_b 2.92 mu_h 44.2914 mu_a 1.08 mu_w 1.77  v 1.2228e-02
+pct s_ma = 0.36 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.34 pct s_w = 0.32 pct s2p_ki = 0.31 
+pct s_b = 0.33 pct s_h = 0.45 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 160000 
+mu_b 2.08 mu_h 47.2036 mu_a 1.02 mu_w 2.77  v 1.0271e-02
+pct s_ma = 0.36 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.34 pct s_w = 0.32 pct s2p_ki = 0.31 
+pct s_b = 0.33 pct s_h = 0.45 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 165000 
+mu_b 2.74 mu_h 43.0826 mu_a 0.76 mu_w 2.91  v 1.2009e-02
+pct s_ma = 0.36 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.34 pct s_w = 0.32 pct s2p_ki = 0.31 
+pct s_b = 0.33 pct s_h = 0.45 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 170000 
+mu_b 3.51 mu_h 40.1445 mu_a 0.90 mu_w 2.82  v 1.1801e-02
+pct s_ma = 0.36 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.33 pct s_w = 0.32 pct s2p_ki = 0.31 
+pct s_b = 0.33 pct s_h = 0.45 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 175000 
+mu_b 3.27 mu_h 45.9371 mu_a 0.59 mu_w 2.21  v 1.2628e-02
+pct s_ma = 0.36 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.33 pct s_w = 0.32 pct s2p_ki = 0.31 
+pct s_b = 0.33 pct s_h = 0.45 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 180000 
+mu_b 4.38 mu_h 41.7036 mu_a 1.08 mu_w 2.65  v 1.0547e-02
+pct s_ma = 0.36 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.33 pct s_w = 0.31 pct s2p_ki = 0.31 
+pct s_b = 0.33 pct s_h = 0.45 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 185000 
+mu_b 3.20 mu_h 38.9891 mu_a 1.06 mu_w 2.46  v 9.5479e-03
+pct s_ma = 0.36 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.33 pct s_w = 0.32 pct s2p_ki = 0.31 
+pct s_b = 0.33 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 190000 
+mu_b 3.34 mu_h 33.3048 mu_a 1.34 mu_w 3.46  v 1.1435e-02
+pct s_ma = 0.36 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.33 pct s_w = 0.32 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 195000 
+mu_b 2.22 mu_h 38.1536 mu_a 1.12 mu_w 2.72  v 1.2401e-02
+pct s_ma = 0.36 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.34 pct s_w = 0.32 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 200000 
+mu_b 4.08 mu_h 36.2698 mu_a 0.89 mu_w 1.08  v 1.3373e-02
+pct s_ma = 0.36 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.34 pct s_w = 0.32 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 205000 
+mu_b 3.19 mu_h 38.7144 mu_a 1.05 mu_w 2.79  v 1.1461e-02
+pct s_ma = 0.36 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.34 pct s_w = 0.31 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 210000 
+mu_b 2.79 mu_h 41.1566 mu_a 1.30 mu_w 3.36  v 1.1342e-02
+pct s_ma = 0.36 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.34 pct s_w = 0.31 pct s2p_ki = 0.31 
+pct s_b = 0.33 pct s_h = 0.43 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 215000 
+mu_b 3.17 mu_h 47.4157 mu_a 1.35 mu_w 2.58  v 1.1290e-02
+pct s_ma = 0.36 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.34 pct s_w = 0.31 pct s2p_ki = 0.31 
+pct s_b = 0.33 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 220000 
+mu_b 3.33 mu_h 43.2280 mu_a 1.27 mu_w 3.39  v 1.2341e-02
+pct s_ma = 0.36 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.34 pct s_w = 0.31 pct s2p_ki = 0.31 
+pct s_b = 0.33 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 225000 
+mu_b 2.63 mu_h 44.1010 mu_a 0.84 mu_w 2.79  v 9.7137e-03
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.34 pct s_w = 0.31 pct s2p_ki = 0.31 
+pct s_b = 0.33 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 230000 
+mu_b 4.20 mu_h 36.6307 mu_a 1.03 mu_w 2.91  v 1.2186e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.33 pct s_w = 0.31 pct s2p_ki = 0.31 
+pct s_b = 0.33 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 235000 
+mu_b 3.24 mu_h 40.0077 mu_a 0.21 mu_w 2.86  v 1.1629e-02
+pct s_ma = 0.36 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.34 pct s_w = 0.31 pct s2p_ki = 0.31 
+pct s_b = 0.33 pct s_h = 0.43 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 240000 
+mu_b 2.60 mu_h 47.1415 mu_a 0.89 mu_w 2.54  v 9.9312e-03
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.33 pct s_w = 0.31 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 245000 
+mu_b 2.56 mu_h 37.4284 mu_a 1.25 mu_w 2.22  v 1.0842e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.34 pct s_w = 0.31 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 250000 
+mu_b 3.38 mu_h 44.4481 mu_a 1.01 mu_w 1.93  v 1.1701e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.33 pct s_w = 0.31 pct s2p_ki = 0.30 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 255000 
+mu_b 2.87 mu_h 46.8866 mu_a 0.67 mu_w 1.16  v 1.0683e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.34 pct s_w = 0.31 pct s2p_ki = 0.30 
+pct s_b = 0.34 pct s_h = 0.43 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 260000 
+mu_b 1.89 mu_h 36.6147 mu_a 0.22 mu_w 2.37  v 1.2457e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.34 pct s_w = 0.31 pct s2p_ki = 0.31 
+pct s_b = 0.33 pct s_h = 0.43 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 265000 
+mu_b 2.16 mu_h 49.1224 mu_a 1.02 mu_w 2.23  v 1.1443e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.34 pct s_w = 0.31 pct s2p_ki = 0.31 
+pct s_b = 0.33 pct s_h = 0.43 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 270000 
+mu_b 2.38 mu_h 40.4651 mu_a 1.27 mu_w 2.57  v 8.7870e-03
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.34 pct s_w = 0.31 pct s2p_ki = 0.31 
+pct s_b = 0.33 pct s_h = 0.43 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 275000 
+mu_b 3.04 mu_h 34.1503 mu_a 0.84 mu_w 2.74  v 9.6513e-03
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.33 pct s_w = 0.31 pct s2p_ki = 0.31 
+pct s_b = 0.33 pct s_h = 0.43 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 280000 
+mu_b 3.17 mu_h 46.1777 mu_a 1.04 mu_w 3.57  v 1.1116e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.33 pct s_w = 0.31 pct s2p_ki = 0.31 
+pct s_b = 0.33 pct s_h = 0.43 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 285000 
+mu_b 2.74 mu_h 40.9640 mu_a 0.85 mu_w 2.48  v 1.1065e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.33 pct s_w = 0.31 pct s2p_ki = 0.31 
+pct s_b = 0.33 pct s_h = 0.43 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 290000 
+mu_b 2.04 mu_h 48.4603 mu_a 0.89 mu_w 2.46  v 1.1091e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.33 pct s_w = 0.31 pct s2p_ki = 0.31 
+pct s_b = 0.33 pct s_h = 0.43 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 295000 
+mu_b 2.66 mu_h 40.5835 mu_a 0.80 mu_w 1.91  v 1.4063e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.33 pct s_w = 0.32 pct s2p_ki = 0.31 
+pct s_b = 0.33 pct s_h = 0.43 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 300000 
+mu_b 4.11 mu_h 47.9098 mu_a 1.25 mu_w 2.20  v 1.1272e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.33 pct s_w = 0.32 pct s2p_ki = 0.31 
+pct s_b = 0.33 pct s_h = 0.43 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 305000 
+mu_b 2.47 mu_h 46.0193 mu_a 0.49 mu_w 2.83  v 1.0584e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.33 pct s_w = 0.32 pct s2p_ki = 0.31 
+pct s_b = 0.33 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 310000 
+mu_b 1.89 mu_h 45.5668 mu_a 1.16 mu_w 2.43  v 1.1418e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.33 pct s_w = 0.32 pct s2p_ki = 0.31 
+pct s_b = 0.33 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 315000 
+mu_b 3.20 mu_h 47.4397 mu_a 0.48 mu_w 2.09  v 1.1053e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.32 pct s_w = 0.31 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.43 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 320000 
+mu_b 2.34 mu_h 49.4969 mu_a 0.95 mu_w 2.60  v 1.0297e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.32 pct s_w = 0.31 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 325000 
+mu_b 3.02 mu_h 49.6360 mu_a 1.06 mu_w 2.38  v 9.9831e-03
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.32 pct s_w = 0.32 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 330000 
+mu_b 3.14 mu_h 44.0532 mu_a 0.80 mu_w 2.19  v 1.0411e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.32 pct s_w = 0.31 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 335000 
+mu_b 2.36 mu_h 43.2951 mu_a 1.17 mu_w 3.02  v 1.1194e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.32 pct s_w = 0.32 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 340000 
+mu_b 3.99 mu_h 44.0197 mu_a 0.84 mu_w 2.76  v 1.0639e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.32 pct s_w = 0.32 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 345000 
+mu_b 3.45 mu_h 43.4895 mu_a 1.05 mu_w 3.51  v 1.3277e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.32 pct s_w = 0.32 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 350000 
+mu_b 3.52 mu_h 29.6145 mu_a 0.89 mu_w 2.69  v 1.0670e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.32 pct s_w = 0.32 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 355000 
+mu_b 3.18 mu_h 43.5915 mu_a 1.05 mu_w 3.72  v 9.3449e-03
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.32 pct s_w = 0.32 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 360000 
+mu_b 0.21 mu_h 43.3215 mu_a 0.93 mu_w 3.18  v 1.0511e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.32 pct s_w = 0.32 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 365000 
+mu_b 2.53 mu_h 29.7723 mu_a 1.08 mu_w 2.89  v 9.9032e-03
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.32 pct s_w = 0.32 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 370000 
+mu_b 2.06 mu_h 35.9759 mu_a 1.44 mu_w 3.64  v 1.0330e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.32 pct s_w = 0.32 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 375000 
+mu_b 2.28 mu_h 46.2742 mu_a 0.33 mu_w 2.58  v 8.8078e-03
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.32 pct s_w = 0.32 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 380000 
+mu_b 2.86 mu_h 40.9821 mu_a 0.58 mu_w 2.76  v 1.0638e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.33 pct s_w = 0.32 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 385000 
+mu_b 3.01 mu_h 41.6575 mu_a 1.17 mu_w 2.48  v 1.4028e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.32 pct s_w = 0.32 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 390000 
+mu_b 3.19 mu_h 36.6720 mu_a 1.30 mu_w 2.63  v 1.1798e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.32 pct s_w = 0.32 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 395000 
+mu_b 2.80 mu_h 36.8034 mu_a 1.07 mu_w 3.06  v 1.2956e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.32 pct s_w = 0.32 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 400000 
+mu_b 2.87 mu_h 33.1897 mu_a 0.93 mu_w 2.49  v 1.0032e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.32 pct s_w = 0.32 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 405000 
+mu_b 2.46 mu_h 42.1187 mu_a 0.61 mu_w 2.36  v 1.3222e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.32 pct s_w = 0.32 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 410000 
+mu_b 3.97 mu_h 40.6204 mu_a 0.71 mu_w 3.41  v 1.2128e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.32 pct s_w = 0.32 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 415000 
+mu_b 2.63 mu_h 37.8746 mu_a 0.62 mu_w 2.86  v 1.1353e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.32 pct s_w = 0.32 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 420000 
+mu_b 3.82 mu_h 44.6366 mu_a 1.07 mu_w 2.66  v 1.1392e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.32 pct s_w = 0.32 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 425000 
+mu_b 4.14 mu_h 42.9239 mu_a 1.45 mu_w 3.44  v 1.1167e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.32 pct s_w = 0.32 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 430000 
+mu_b 2.50 mu_h 35.6835 mu_a 1.30 mu_w 3.57  v 1.0760e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.32 pct s_w = 0.32 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 435000 
+mu_b 3.07 mu_h 42.3896 mu_a 1.36 mu_w 2.55  v 1.2446e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.32 pct s_w = 0.32 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 440000 
+mu_b 3.55 mu_h 43.8174 mu_a 0.60 mu_w 2.64  v 9.6909e-03
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.32 pct s_w = 0.32 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 445000 
+mu_b 4.13 mu_h 38.5300 mu_a 1.44 mu_w 2.18  v 1.2139e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.32 pct s_w = 0.31 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 450000 
+mu_b 3.21 mu_h 35.6296 mu_a 1.06 mu_w 3.16  v 1.4746e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.32 pct s_w = 0.31 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 455000 
+mu_b 2.75 mu_h 40.3567 mu_a 0.98 mu_w 2.50  v 1.0618e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.32 pct s_w = 0.31 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 460000 
+mu_b 3.42 mu_h 36.6653 mu_a 0.91 mu_w 2.62  v 9.5435e-03
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.32 pct s_w = 0.31 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 465000 
+mu_b 3.51 mu_h 42.6519 mu_a 0.76 mu_w 2.59  v 1.2276e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.32 pct s_w = 0.31 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 470000 
+mu_b 3.66 mu_h 46.2848 mu_a 0.99 mu_w 2.22  v 1.0657e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.32 pct s_w = 0.31 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 475000 
+mu_b 3.62 mu_h 36.0535 mu_a 0.79 mu_w 3.11  v 1.1588e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.32 pct s_w = 0.31 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 480000 
+mu_b 3.28 mu_h 35.8624 mu_a 1.17 mu_w 2.19  v 1.0119e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.32 pct s_w = 0.31 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 485000 
+mu_b 4.00 mu_h 38.0927 mu_a 1.47 mu_w 3.65  v 1.2004e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.32 pct s_w = 0.31 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 490000 
+mu_b 2.67 mu_h 44.8902 mu_a 0.96 mu_w 3.41  v 9.7658e-03
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.32 pct s_w = 0.31 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
+
+
+iter = 495000 
+mu_b 2.39 mu_h 52.5731 mu_a 1.22 mu_w 2.04  v 1.1229e-02
+pct s_ma = 0.37 pct s_a = 0.41 pct A_ki = 0.35 
+pct s_mw = 0.32 pct s_w = 0.31 pct s2p_ki = 0.31 
+pct s_b = 0.34 pct s_h = 0.44 pct B-HL = 0.26 pct time = 0.35 
