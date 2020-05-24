@@ -66,7 +66,9 @@ extern int mmm;
     uniform distribution
  *partial_likelihood: a vector of likelihoods where the ith element is the
     likelihood if pulse i were removed
- *tmp: used when drawing new pulse's mass and width
+ new_theta: used when drawing new pulse's mass and width
+ new_tsd : the std in the t-prior for drawing new pulse masses and widths
+ new_kappa: used when drawing the new pulsess massess and widths
  *node: counter through pulses
  *new_node: if a birth occurs, we give the new pulse this name
 
@@ -92,8 +94,8 @@ void birth_death(Subject_type *sublist,double **ts,Common_parms *parms,int N,
                  unsigned long *seed,int iter)
 {
   int i,j,k,remove,num_node,flag,aaa,max_num_node=60;
-  double S,Birth_rate,T=1.,full_likelihood,full_likelihood2,max;
-  double Death_rate,*death_rate,position,*partial_likelihood,*tmp;
+  double S,Birth_rate,T=1.,full_likelihood,full_likelihood2,max,new_kappa, new_tsd;
+  double Death_rate,*death_rate,position,*partial_likelihood,new_theta;
   Node_type *node,*new_node,*list;
   Subject_type *subject;
   double rnorm(double,double,unsigned long *);void print_list(Node_type *);
@@ -101,6 +103,7 @@ void birth_death(Subject_type *sublist,double **ts,Common_parms *parms,int N,
   double kiss(unsigned long *);
   double rexp(double, unsigned long *);
   double runif_atob(unsigned long *,double,double);
+    double rgamma(double,double,unsigned long *);
   void mean_contribution(Node_type *,double **,Common_parms *,int,double);
   double likelihood(Subject_type *list,double **ts,Common_parms *parms,int N,
                     Node_type *node_out);
@@ -122,7 +125,7 @@ void birth_death(Subject_type *sublist,double **ts,Common_parms *parms,int N,
   }
 */
     
-    Birth_rate = parms->nprior;
+  Birth_rate = parms->nprior;
     
   subject=sublist->succ;
 
@@ -131,28 +134,27 @@ void birth_death(Subject_type *sublist,double **ts,Common_parms *parms,int N,
   while (subject != NULL){
 
      list = subject->list;
-  aaa = 0;
+      aaa = 0;
 
-  S = 0.0;
-  tmp = (double *)calloc(2,sizeof(double));
+      S = 0.0;
 
   /*Save Likelihood*/
   /*full_likelihood = *likeli;
 */
   /*Go until the loop is broken*/
 
-  while (1) {
+      while (1) {
 
-    /*This counter keeps this loop from running too many times*/
-    aaa++;
+          /*This counter keeps this loop from running too many times*/
+          aaa++;
   
-    /*Count number of pulses*/
-    num_node = 0;
-    node = list->succ;
-    while (node != NULL) {
-      num_node++;
-      node = node->succ;
-    }
+          /*Count number of pulses*/
+          num_node = 0;
+          node = list->succ;
+          while (node != NULL) {
+              num_node++;
+              node = node->succ;
+          }
 
     
     /*Allocate memory for partial likelihood vector*/
@@ -191,19 +193,19 @@ void birth_death(Subject_type *sublist,double **ts,Common_parms *parms,int N,
     if (death_rate != NULL) {
       Death_rate = death_rate[0];
       for (i=1;i<num_node;i++) {
-	max = (Death_rate > death_rate[i]) ? Death_rate:death_rate[i];
-	Death_rate = log(exp(Death_rate-max) + exp(death_rate[i]-max)) + max;
+          max = (Death_rate > death_rate[i]) ? Death_rate:death_rate[i];
+          Death_rate = log(exp(Death_rate-max) + exp(death_rate[i]-max)) + max;
       }
 
       for (i=0;i<num_node;i++) {
-	death_rate[i] -= Death_rate;
-	death_rate[i] = exp(death_rate[i]);
+          death_rate[i] -= Death_rate;
+          death_rate[i] = exp(death_rate[i]);
       }
 
       for (i=1;i<num_node;i++)
-	death_rate[i] += death_rate[i-1];
+          death_rate[i] += death_rate[i-1];
 
-      Death_rate = exp(Death_rate);
+        Death_rate = exp(Death_rate);
     }
     else 
       Death_rate = 0;
@@ -245,36 +247,30 @@ void birth_death(Subject_type *sublist,double **ts,Common_parms *parms,int N,
         position = runif_atob(seed,fitstart,fitend);
 	
         node = list->succ;
-        flag = 1;
 
+        /* initialize a new node */
+        new_node = initialize_node();
+        new_node->time = position;
+        
       /* simulate random effects from the prior */
-      if (flag) {
-	for (k=0;k<100;k++) {
-            for (j=0;j<2;j++)
-                tmp[j]=exp(rnorm(subject->theta[j],parms->re_precision[j],seed));
-            
-            if ((tmp[0] > 0) && (tmp[1] > 0)) {
-                flag = 0;
-                break;
+        for (j=0;j<2;j++) {
+            new_theta = -1;
+            new_kappa = rgamma(2,2,seed);
+            new_tsd = sqrt((parms->re_precision[0] * parms->re_precision[0]) / new_kappa);
+            while (new_theta < 0 ) {
+                new_theta = rnorm(subject->theta[j],new_tsd,seed);
             }
-            
-	}
-        /*Only continue once we have positive values of mass and width*/
-        if (!flag) {
-	  /* initialize a new node */
-	  new_node = initialize_node();
-	  new_node->time = position;
-	  new_node->theta[0] = tmp[0];
-          new_node->theta[1] = tmp[1];
-/*          new_node->width = exp(new_node->theta[1]);*/
-          new_node->mean_contrib = (double *)calloc(N,sizeof(double));
-          mean_contribution(new_node,ts,parms,N,subject->basehalf[1]);
+            new_node->theta[j] = new_theta;
+            new_node->kappa[j] = new_kappa;
+        }
+        
+        new_node->mean_contrib = (double *)calloc(N,sizeof(double));
+        mean_contribution(new_node,ts,parms,N,subject->basehalf[1]);
           /* insert the new node; this routine also makes sure it's
            located properly */
-	  insert_node(new_node,list);
-    	}
+        insert_node(new_node,list);
+    	
       }
-    }
 
     /*Otherwise, a death occurs */
     else { 

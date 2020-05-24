@@ -167,17 +167,17 @@ int main(int argc,char *argv[])
 
 /***Read in pulse mass prior information**/
     fscanf(finput,"%lf %lf %lf %lf\n", &mprior1, &mprior2, &mprior3, &mprior4);
-    hyper->hmean[0] = mprior1; /***mean of the prior on population mean log pulse mass***/
+    hyper->hmean[0] = mprior1; /***mean of the prior on population mean pulse mass***/
     hyper->hvar[0] = mprior2;  /***variance of the prior on the mean*/
-    priors->re_var[0] = mprior3; /**Maximum value of the  pulse-to-pulse SD of log pulse mass **/
-    hyper->prec[0] = mprior4;  /**Maximum value of the subject-to-subject SD of mean log pulse masses **/
+    priors->re_var[0] = mprior3; /**Maximum value of the  pulse-to-pulse SD of  pulse mass **/
+    hyper->prec[0] = mprior4;  /**Maximum value of the subject-to-subject SD of mean  pulse masses **/
 
 /***pulse width prior information: hmean: mean of prior on population level mean, var on pop. mean, ***/
     fscanf(finput,"%lf %lf %lf %lf\n", &wprior1, &wprior2, &wprior3, &wprior4);
-    hyper->hmean[1] = wprior1;  /***mean of the prior on the population mean log pulse width ***/
+    hyper->hmean[1] = wprior1;  /***mean of the prior on the population mean  pulse width **/
     hyper->hvar[1] = wprior2;  /***variance of the prior on the mean***/
-    priors->re_var[1] = wprior3;  /**Maximum value of the pulse-to-pulse SD of the log pulse width **/
-    hyper->prec[1] = wprior4;     /**Maximum value of the subject-to-subject SD of the mean log pulse widths **/
+    priors->re_var[1] = wprior3;  /**Maximum value of the pulse-to-pulse SD of the  pulse width **/
+    hyper->prec[1] = wprior4;     /**Maximum value of the subject-to-subject SD of the mean  pulse widths **/
     
 /***Baseline prior information: mean: mean of prior on population level mean, var on pop. mean
     of the variance of the sub-to-sub variation of the subj. level means
@@ -213,14 +213,14 @@ bprior3: upper bound on the uniform prior for the sd of sub-to-sub mean variatio
 
 /***Read in and set starting values***/
     fscanf(finput,"%lf %lf %lf\n", &mstart1, &mstart2, &mstart3);
-    priors->fe_mean[0] = mstart1;  /*starting value for population mean log pulse mass*/
-    parms->re_precision[0] = mstart2; /*starting value for the SD of the pulse-to-pulse log pulse masses*/
-    priors->fe_precision[0] = mstart3; /*starting value for the SD of the subject-to-subject mean log pulse masses */
+    priors->fe_mean[0] = mstart1;  /*starting value for population mean pulse mass*/
+    parms->re_precision[0] = mstart2; /*starting value for the SD of the pulse-to-pulse pulse masses*/
+    priors->fe_precision[0] = mstart3; /*starting value for the SD of the subject-to-subject meanpulse masses */
     
     fscanf(finput,"%lf %lf %lf\n", &wstart1, &wstart2, &wstart3);
-    priors->fe_mean[1] = wstart1;  /*starting value for the population mean log pulse width */
-    parms->re_precision[1] = wstart2;  /*starting value for the SD of the pulse-to-pulse log pulse widths*/
-    priors->fe_precision[1] = wstart3; /*starting value for the SD of the subject-to-subject mean log pulse widths*/
+    priors->fe_mean[1] = wstart1;  /*starting value for the population mean pulse width */
+    parms->re_precision[1] = wstart2;  /*starting value for the SD of the pulse-to-pulse pulse widths*/
+    priors->fe_precision[1] = wstart3; /*starting value for the SD of the subject-to-subject mean pulse widths*/
     
     fscanf(finput,"%lf %lf\n", &bstart1, &bstart2);
     priors->meanbh[0] = bstart1;  /*starting value for the population mean baseline */

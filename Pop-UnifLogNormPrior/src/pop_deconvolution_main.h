@@ -9,7 +9,7 @@ typedef struct node_tag {
   struct node_tag *pred;
   double time;  /*time of the pulse in minutes*/
   double theta[2];  /*mass of pulse, width of pulse(variance)*/
-/*  double width;*/
+  double kappa[2];  /*scale in the t-distribution of the pulse mass and width*/
   double *mean_contrib;  /*mean conc. for this pulse for each time point*/
 } Node_type;
 
@@ -20,7 +20,7 @@ typedef struct node_tag {
 typedef struct {
   double sigma;  /*model error variance for the individual*/
   double lsigma; /*log of hte model error variance for the individual*/
-  double theta[2];  /*individual level mean log pulse mass and mean log pulse width*/
+  double theta[2];  /*individual level mean pulse mass and log pulse width:see defined below in subj structure.  Careful with use.  Double check what is going on*/
   double *re_precision; /*individual level pulse-to-pulse SD:  NOT PRECISION!*/
   int numsub; /* number of subjects total*/
   int subindex; /*counter*/
@@ -31,21 +31,21 @@ typedef struct {
 typedef struct {
   double meanbh[2]; /*prior mean on baseline and halflife */
   double varbh[2]; /*variance on prior of baseline and halflife */
-  double *fe_mean;
-  double *fe_precision;
-  double *re_var;
+  double *fe_mean; /*population mean pulse mass and width*/
+  double *fe_precision; /*sub-to-sub SD (check) */
+  double *re_var; /* Maxium values in the Unif prior defining the pulse-to-pulse SD of pulse mass and width*/
   double alpha;  /* prior parameters for model error */                     
   double beta;
  
 } Priors;
 
 typedef struct {
-    double hmean[2];
-    double hvar[2];
-    double prec[2];
-    double meanmeanbh[2];
-    double meanvarbh[2];
-    double varbh[2];
+    double hmean[2]; /* means in the prior for population mean pulse mass and width*/
+    double hvar[2]; /*Variances in the prior for the population mean pulse mass and width*/
+    double prec[2]; /* Maximum value of the pulse-to-pulse SD of the individual pulse mass and width random effects*/
+    double meanmeanbh[2]; /*means in the priors for the population mean baseline and halflife*/
+    double meanvarbh[2]; /*Variances in the priors for the population mean baseline and half-life*/
+    double varbh[2]; /*upper bound on the uniform prior for the sd of the sub-to-sub baseline and half-lives*/
 
 } Hyper_priors;
 

@@ -15,7 +15,7 @@
  ntime: counter that increments for each loop of the pulse location MH draw
  arem: counter that increments when an individual pulse mass estimate is accetped in the MH draw
  nrem: counter that increments for each loop of the individual pulse mass MH draw
- arew: counter that increments when an individual pulse width estimate is accetped in the MH draw
+ arew: counter that increments when an individual pulse width estimate is accepted in the MH draw
  nrew: counter that increments for each loop of the individual pulse width MH draw
  afepmv: counter that increments when an overall mean pulse mass standard deviation (sma) is accetped in the MH draw
  nfepmv: counter that increments for each loop of the overall mean pulse mass standard deviation (sma) MH draw
@@ -158,6 +158,8 @@ void mcmc(Subject_type *sublist,Common_parms *parms,double **ts,long iter,int N,
  void draw_fixed_effects(Subject_type *,Priors *,Common_parms *,unsigned long *);
  void draw_fe_precision(Subject_type *,Priors *,Common_parms *,double,double,unsigned long *);
  void draw_random_effects(double **ts,Subject_type *,Common_parms *,int,double,double,unsigned long *);
+ void draw_tscale(Node_type *, Common_parms *, double, double,
+              long *, long * , long *, long *);
  void draw_bh_mean(Subject_type *,Priors *,Common_parms *,unsigned long *,Hyper_priors *);
  void draw_bh_var(Subject_type *,Priors *,double,double,unsigned long *,Hyper_priors *);
  void draw_fe_priors(Subject_type *,Priors *,Common_parms *,unsigned long *,Hyper_priors *);
@@ -369,7 +371,7 @@ for (i=0;i<2;i++)
                /*START OF draw_fe_priors SUBROUTINE*/
 /*********************************************************************/
 /*********************************************************************/
-/*draw_fe_priors: this runs the Gibbs sampler draw for overall mean mass and width;
+/*draw_fe_priors: this runs the M-H sampler draw for overall mean mass and width;
     ARGUMENTS: Subject_type *sublist; this is the current list of subjects;
                Priors *priors; the current values of the prior parameters;
                Common_parms *parms; the current values of the common parameters;
@@ -394,10 +396,31 @@ SUBROUTINES USED
 void draw_fe_priors(Subject_type *sublist,Priors *priors,Common_parms *parms,unsigned long *seed,Hyper_priors *hyper)
 {
 /* declare variables */
+    int j,t;
+    double *tmp1,*new_mean,prop_new,prop_old,psum,pcomp,prior_old,prior_new;
+    double prior_ratio,prop_ratio,temp,alpha;
+    Subject_type *subject;
+    double kiss(unsigned long *);
+    double rnorm(double,double,unsigned long *);
+
+    /*Allocate Memory*/
+    new_mean = (double *)calloc(2,sizeof(double));
+    tmp1 = (double *)calloc(2,sizeof(double));
+
+    /*Add 1 to the counters for acceptance rates of pop mean pulse mass and width*/
+    nfepmv++;
+    nfepwv++;
+
+    /*Assign current acceptance counts to temporary vector*/
+    tmp1[0] = afepmv;
+    tmp1[1] = afepwv;
+    
+/*OLD MAY NOT NEED*/
    int j;
    double fesum,gmean,gvar;
    Subject_type *subject;
-
+/***********************************/
+    
 /*declare functions */
    double rnorm(double,double,unsigned long *);
    double kiss(unsigned long *);

@@ -69,7 +69,7 @@ Subject_type *initialize_subject(void)
   s->list = initialize_node();
   s->decay = 0;
   for (i=0;i<2;i++)
-    s->theta[i] = 0;
+    s->theta[i] = 1;
   for (i=0;i<2;i++)
     s->basehalf[i] = 0;
 
@@ -95,8 +95,10 @@ Node_type *initialize_node(void)
   p->succ = p->pred = NULL;
   p->mean_contrib = NULL;
   p->time = fitstart;
-  for (i=0;i<2;i++) 
-    p->theta[i] = 0;
+    for (i=0;i<2;i++) {
+        p->theta[i] = 1;
+        p->kappa[i] = 1;
+    }
 
   return p;
 }
